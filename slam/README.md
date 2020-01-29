@@ -78,6 +78,6 @@ $ catkin_make
 ```
 $ rosluanch ydlida_ros lidar_view.launch
 ```
-## result
+## Result
 ![mapping](https://user-images.githubusercontent.com/46383014/73356963-da3fab00-42de-11ea-8a6d-06a07113587a.png)
 
