@@ -1,6 +1,7 @@
 # **Ydlidar ROS Package install**
 
-## ROS 버젼은 UBUNTU 18.04 버젼에서 melodic을 사용해야함. 모든 과정은 ROS melodic이 설치되어있다고 가정하고 진행.
+### ROS version은 UBUNTU 18.04 version에서 melodic을 사용해야함. 
+### 모든 과정은 ROS melodic이 설치되어있다고 가정하고 진행.
 
 ### 1. Ros package 를 저장할 디렉토리 생성
 ```
@@ -77,3 +78,6 @@ $ catkin_make
 ```
 $ rosluanch ydlida_ros lidar_view.launch
 ```
+## result
+![mapping](https://user-images.githubusercontent.com/46383014/73356963-da3fab00-42de-11ea-8a6d-06a07113587a.png)
+
