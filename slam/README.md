@@ -31,7 +31,7 @@ $ cd ~/ydlidar_ws
 $ catkin_make ydlidar
 ```
 ## SCREEN SHOT
-![catkin_make](./home/pirl/Slam/catkin_make.png)
+![catkin_make](https://user-images.githubusercontent.com/46383014/73356798-774e1400-42de-11ea-9da7-f7fd45d421f1.png)
 ### +++ processing catkin package : 'ydlidar_ros' >> 내가 생성한 ros package
 
 #### ** --주의 해야 할 점-- **
