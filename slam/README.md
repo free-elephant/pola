@@ -5,7 +5,7 @@
 
 ### 1. Ros package 를 저장할 디렉토리 생성
 ```
-$ mkir -p ~/ydlidar_ws/src
+$ mkdir -p ~/ydlidar_ws/src
 ```
 
 ### 2. ~/ydlidar_ws/src 안에 ydlidar package를 git에서 다운로드
