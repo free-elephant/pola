@@ -34,7 +34,7 @@ $ catkin_make ydlidar
 ![catkin_make](./home/pirl/Slam/catkin_make.png)
 ### +++ processing catkin package : 'ydlidar_ros' >> 내가 생성한 ros package
 
-#### **주의 해야 할 점**
+#### ** --주의 해야 할 점-- **
 ##### 확실하진 않지만 이 과정을 거치면서 /dev directory 안에 ydlidar file이 생성되어있어야함.
 ```
 $ cd /dev
