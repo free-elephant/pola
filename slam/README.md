@@ -1,5 +1,7 @@
 # **Ydlidar ROS Package install**
 
+## ROS 버젼은 UBUNTU 18.04 버젼에서 melodic을 사용해야함. 모든 과정은 ROS melodic이 설치되어있다고 가정하고 진행.
+
 ### 1. Ros package 를 저장할 디렉토리 생성
 ```
 $ mkir -p ~/ydlidar_ws/src
@@ -32,8 +34,8 @@ $ catkin_make ydlidar
 ![catkin_make](./home/pirl/Slam/catkin_make.png)
 ### +++ processing catkin package : 'ydlidar_ros' >> 내가 생성한 ros package
 
-### **주의 해야 할 점**
-#### 확실하진 않지만 이 과정을 거치면서 /dev directory 안에 ydlidar file이 생성되어있어야함.
+#### **주의 해야 할 점**
+##### 확실하진 않지만 이 과정을 거치면서 /dev directory 안에 ydlidar file이 생성되어있어야함.
 ```
 $ cd /dev
 $ ls
@@ -47,4 +49,31 @@ $ echo "source ~/ydlidar_ws/devel/setup.bash" >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
-### 7. 
+### 7. directory 권한 설정
+```
+$ roscd ydlidar_ros/startup # ydlidar_ros는 5번에서 만든 catkin package name
+$ sudo chmod +x initenv.sh
+$ sudo sh initenv.sh
+```
+
+### 8. roslaunch 
+```
+$ rosluanch ydlida_ros lidar_view.launch
+
+# 실행이 안될 확률이 높음
+```
+
+### 9. ydlidar_node / ydlidar_client 설정
+```
+$ cd ~/ydlidar_ws
+$ catkin_make
+
+# [100%] Built target ydlidar_node
+# [100%] Built target ydlidar_client
+# 두 가지 타겟이 생성되면 성공
+```
+
+### 10. 다시 실행
+```
+$ rosluanch ydlida_ros lidar_view.launch
+```
