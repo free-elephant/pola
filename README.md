@@ -242,7 +242,7 @@ $ python
 pip install torch==1.2.0 
 pip install torchvision==0.4.0
 ```
-
+### 여기까지 설치를 완료하면 Python으로 작업하기 위한 기본적인 환경구축은 끝난다.
 ***
 ## ** Hardware Process **
 #### 1. 도서관 환경 사전 조사
