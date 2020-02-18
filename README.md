@@ -21,13 +21,13 @@ Hardware
  - Intel Realsense Camera 435i
  - Ydlidar G2
  - GeForce RTX 2080 * 2
- - BLDC모터 (PG42-BL4261)
- - BLDC모터드라이버 (BDC-15) 
- - 기어모터 고정브라켓 (GMB-42M)
- - 알루미늄 프로파일
- - 큐브프레임 (MDF 합판)
- - 오프로드바퀴 (130파이)
- - 연축전지 12V
+ - BLDC모터 (PG42-BL4261)      https://www.motorbank.kr/goods/goods_view.php?goodsNo=1000009198#zoom-layer
+ - BLDC모터드라이버 (BDC-15)     https://www.motorbank.kr/goods/goods_view.php?goodsNo=1000006552
+ - 기어모터 고정브라켓 (GMB-42M)  https://www.motorbank.kr/goods/goods_view.php?goodsNo=1000009138
+ - 알루미늄 프로파일              https://smartstore.naver.com/smartprofile/products/3012931030
+ - 큐브프레임 (MDF 합판)         
+ - 오프로드바퀴 (130파이)        http://www.devicemart.co.kr/goods/view?no=12218      
+ - 연축전지 12V                http://www.11st.co.kr/product/SellerProductDetail.tmall method=getSellerProductDetail&prdNo=1881232498&trTypeCd
  - 보조배터리(output:3A)
 ***
 ## Install Before Starting 
