@@ -157,21 +157,22 @@ $ sudo apt update
 $ sudo apt install libjasper1 libjasper-dev
 $ sudo apt-get update && sudo apt-get upgrade — fix-missing — fix-broken
 $ sudo apt-get install libgtk2.0-dev
+$ sudo apt -y install python3-dev python3-pip python3-vev
+sudo -H pip3 install -U pip numpy
+sudo apt -y install python3-testresources
 ```
 #### 6.2 Downloads Files OpenCV github
 ```
 $ cd ~
-$ wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.4.zip
-$ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.4.zip
+$ git clone https://github.com/opencv/opencv.git
+$ cd opencv
+$ cd ..
+$ git clone https://github.com/opencv/opencv_contrib.git
+$ cd opencv_contrib
+$ cd ..
 ```
-#### 6.3 unzip Files and rename
+#### 6.3 Make directory
 ```
-$ unzip opencv.zip
-$ unzip opencv_contrib.zip
-
-$ mv opencv-3.4.4 opencv
-$ mv opencv_contrib-3.4.4 opencv_contrib
-
 $ cd ~/opencv
 $ mkdir build
 $ cd build
@@ -221,8 +222,16 @@ $ sudo mv cv2.cpython-36m-x86_64-linux-gnu.so cv2.so
 ```
 #### 6.7 Copy cv2.so to Virtual Enviornment 
 ```
-cd ~/.virtualenvs/cv4/lib/python3.6/site-packages/
+$ cd ~/.virtualenvs/cv4/lib/python3.6/site-packages/
+$ ln -s /usr/local/lib/python3.6/site-packages/cv2/python-3.6/cv2.so cv2.so
 ```
+#### 6.8 Check OpenCV
+```
+$ workon cv4
+$ python
+>>> import cv2
+>>> cv2.__verion__
+
 ***
 ## ** 하드웨어 프로세스 **
 #### 1. 도서관 환경 사전 조사
