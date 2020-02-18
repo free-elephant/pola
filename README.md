@@ -163,15 +163,51 @@ $ sudo apt-get install libgtk2.0-dev
 $ cd ~
 $ wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.4.zip
 $ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.4.zip
-And then unzip the archives:
-
+```
+#### 6.3 unzip Files and rename
+```
 $ unzip opencv.zip
 $ unzip opencv_contrib.zip
-I like to rename the directories, that way our paths will be the same even if you are using a version of OpenCV other than 3.4.4:
 
 $ mv opencv-3.4.4 opencv
 $ mv opencv_contrib-3.4.4 opencv_contrib
+
+$ cd ~/opencv
+$ mkdir build
+$ cd build
 ```
+#### 6.4 Prepare to Compile
+```
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+ -D CMAKE_INSTALL_PREFIX=/usr/local \
+ -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules \
+ -D WITH_CUDA=ON \
+ -D BUILD_NEW_PYTHON_SUPPORT=ON \
+ -D BUILD_PYTHON_SUPPORT=ON \
+ -D INSTALL_PYTHON_EXAMPLES=ON \
+ -D INSTALL_C_EXAMPLES=ON \
+ -D BUILD_EXAMPLES=ON \
+ -D OPENCV_ENABLE_NONFREE=ON \
+ -D BUILD_opencv_cudacodec=OFF \
+ -D ENABLE_FAST_MATH=1 \
+ -D CUDA_FAST_MATH=1 \
+ -D WITH_OPENGL=ON \
+ -D WITH_TBB=ON \
+ -D WITH_V4L=ON \
+ -D WITH_QT=ON \
+ -D WITH_GTK=ON \
+ -D BUILD_opencv_python3=ON \
+ -D PYTHON_EXECUTABLE=~/.virtualenvs/cv4/bin/python3.6 ..
+```
+
+#### 6.5 Compilation
+```
+# 컴퓨터에 따라 다르지만 약 1시간 정도 소요됨.
+make -j8
+
+# 8은 코어수
+# 코어를 확인하려면
+# $ grep -c processor /proc/cpuinfo
 ***
 ## ** 하드웨어 프로세스 **
 #### 1. 도서관 환경 사전 조사
