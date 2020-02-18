@@ -3,8 +3,8 @@
 
 software
 --------
- ububtu 18.04<ul>
- ROS melodic
+ - ububtu 18.04
+ - ROS melodic
 
 Hardware
 --------
