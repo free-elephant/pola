@@ -3,7 +3,6 @@
 #### Cartographer 는 여러 플랫폼 및 센서 구성에서 2D 및 3D 로 SLAM(Simultaneous localization and mapping)을 제공하는 시스템이다.
 #### UBUNTU 18.04 에서는 ROS melodic을 지원하므로 melodic 환경에서 ubuntu를 설치한다.
 ***
-
 ## Install Cartographer ROS
 ### Building & Installation
 ```
@@ -43,7 +42,7 @@ $ git clone https://github.com/kieunbi/pola.git
 $ catkin_make
 $ devel/setup.bash
 ```
-
+![catkin_make](https://user-images.githubusercontent.com/46383014/74773036-748a8180-52d4-11ea-9525-d722b1c4b610.png)
 ##### 위와 같이 실행되면 성공(package 이름은 carto_mapper)
 #### 4. Start
 ```
@@ -52,7 +51,6 @@ roslaunch carto_mapper mapper.launch
 ##### 실행 초기 화면
 ###### 좌측 하단 Add를 클릭한 후 선택할 수 있는 새로운 창이 열리면 By topic으로 가서 map을 선택하면 실행됨.
 ![carto_mapper](https://user-images.githubusercontent.com/46383014/74772881-27a6ab00-52d4-11ea-8560-69eb8f37c5ab.png)
-
 ##### Map을 추가한 rviz 화면
 ![mapping](https://user-images.githubusercontent.com/46383014/74772888-28d7d800-52d4-11ea-86e0-ed633e76b4e1.png)
 
