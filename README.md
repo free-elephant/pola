@@ -199,15 +199,30 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
  -D BUILD_opencv_python3=ON \
  -D PYTHON_EXECUTABLE=~/.virtualenvs/cv4/bin/python3.6 ..
 ```
-
+![aa](https://user-images.githubusercontent.com/46383014/74754241-aab80900-52b4-11ea-8b63-734668e0caec.png)
+##### 위와 같이 나오면 성공
 #### 6.5 Compilation
 ```
 # 컴퓨터에 따라 다르지만 약 1시간 정도 소요됨.
-make -j8
+
+$ make -j8
 
 # 8은 코어수
 # 코어를 확인하려면
 # $ grep -c processor /proc/cpuinfo
+
+$ sudo make install
+$ sudo ldconfig
+```
+#### 6.6 Rename the file 
+```
+$ cd /usr/local/lib/python3.6/site-packages/cv2/python-3.6
+$ sudo mv cv2.cpython-36m-x86_64-linux-gnu.so cv2.so
+```
+#### 6.7 Copy cv2.so to Virtual Enviornment 
+```
+cd ~/.virtualenvs/cv4/lib/python3.6/site-packages/
+```
 ***
 ## ** 하드웨어 프로세스 **
 #### 1. 도서관 환경 사전 조사
