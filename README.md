@@ -86,7 +86,92 @@ $ source ~/.bashrc
 #### 2.4 Check CUDA toolkit
 ```
 $ nvcc -V
+```
+![cudatoolkit](https://user-images.githubusercontent.com/46383014/74749883-2febef80-52ae-11ea-9654-cbd351fab060.png)
+##### 위와 같이 나오면 성공
 
+### 3. Install cuDNN
+#### - Signup & download cuDNN: https://developer.nvidia.com/cudnn (회원가입 필수)
+#### - Downloads ".tgz" file
+```
+$ tar -zxf cudnn-10.0-linux-x64-v7.6.1.34.tgz
+$ cd cuda
+$ sudo cp -P lib64/* /usr/local/cuda/lib64/
+$ sudo cp -P include/* /usr/local/cuda/include/
+$ cd ~
+```
+### 4. Virtual Environment
+#### 4.1 Install Virtual Environment
+```
+$ sudo apt install python3-testresources
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ sudo python3 get-pip.py
+$ sudo pip install virtualenv virtualenvwrapper
+$ sudo rm -rf ~/get-pip.py ~/.cache/pip
+```
+#### 4.2 Add Environment Path
+```
+$ gedit ~/.bashrc 
+
+# bashrc 창이 열리면 밑에 있는 것을 복사해서 붙여넣음. 
+---------------------------
+# virtualenv and virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+---------------------------
+# save 하고 난 뒤 끄기
+
+$ source ~/.bashrc
+```
+#### 4.3 Create Virtual Environment & Check VE
+```
+$ mkvirtualenv cv4 -p python3
+$ workon cv
+```
+### 5.0 Install Tensorflow-gpu + keras
+#### 5.1 pip Install Python libraries
+```
+$ pip install numpy
+$ pip install pandas scipy matplotlib pillow
+$ pip install scikit-learn scikit-image
+$ pip install tensorflow-gpu==1.14.0
+$ pip install keras
+$ pip install imutils h5py requests progressbar2
+```
+##### - opencv 와 pytorch는 나중에 설치할 것이기 때문에 지금 설치하면 안됨.
+#### 5.2  Check Tensorflow gpu enabled or disabled
+```
+$ python
+>>> import tensorflow as tf
+>>> tf.test.is_gpu_available()
+True or False
+
+# 만약에 false 가 나오면 gpu 사용이 안되는 상태니 다시 설치하거나 오류 수정해야함.
+```
+### 6. Install OpenCV
+#### 6.1 Install dependencies
+```
+$ sudo add-apt-repository "deb http://security.ubuntu.com ubuntu xenial-security main"
+$ sudo apt update
+$ sudo apt install libjasper1 libjasper-dev
+$ sudo apt-get update && sudo apt-get upgrade — fix-missing — fix-broken
+$ sudo apt-get install libgtk2.0-dev
+```
+#### 6.2 Downloads Files OpenCV github
+```
+$ cd ~
+$ wget -O opencv.zip https://github.com/opencv/opencv/archive/3.4.4.zip
+$ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/3.4.4.zip
+And then unzip the archives:
+
+$ unzip opencv.zip
+$ unzip opencv_contrib.zip
+I like to rename the directories, that way our paths will be the same even if you are using a version of OpenCV other than 3.4.4:
+
+$ mv opencv-3.4.4 opencv
+$ mv opencv_contrib-3.4.4 opencv_contrib
+```
 ***
 ## ** 하드웨어 프로세스 **
 #### 1. 도서관 환경 사전 조사
