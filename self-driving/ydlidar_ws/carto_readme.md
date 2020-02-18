@@ -5,8 +5,30 @@
 ***
 
 ## Install Cartographer ROS
-### 1. Building & Installation
+### Building & Installation
 ```
-sudo apt-get update
-sudo apt-get install -y python-wstool python-rosdep ninja-build
+$ sudo apt-get update
+$ sudo apt-get install -y python-wstool python-rosdep ninja-build
 ```
+### Create Workspace
+```
+$ mkdir carto_ws
+$ cd carto_ws
+$ wstool init src
+$ wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
+$ wstool update -t src
+```
+### Install Cartographer_ros Dependencies
+```
+$ src/cartographer/scripts/install_proto3.sh
+$ sudo rosdep init
+$ rosdep update
+$ rosdep install --from-paths src --ignore-src --rosdistro=melodic -y
+```
+### Build & Install 
+```
+catkin_make_isolated --install --use-ninja
+```
+***
+## YDLIDAR G2 - Hector Slam Example
+### 설치한 Google Cartographer 를 이용해서 Hector Slam 을 구현해본다. 
