@@ -1,2 +1,0 @@
-x2_cartographer/carto_mapper:ydlidar
--DCATKIN_DEVEL_PREFIX=/home/pirl/ydlidar_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pirl/ydlidar_ws/install -G Unix Makefiles
