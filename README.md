@@ -19,8 +19,10 @@ Hardware
  - Rasberry Pi4
  - Intel Realsense Camera 435i
  - Ydlidar
- - Φ42 유성감속기어 BLDC모터 PG42-BL4261 24V 52.5W 고성능
- - BDC-15 일체형 BLDC모터드라이버 BCD-10 100W DC24V 외부 MCU로 디지탈제어
-
+ - BLDC모터 (PG42-BL4261)
+ - BLDC모터드라이버 (BDC-15) 
+ - 기어모터 고정브라켓 (GMB-42M)
+ - 알루미늄 프로파일
+ - 큐브프레임(MDF 합판)
 
 
