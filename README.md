@@ -4,7 +4,7 @@
 software
 --------
  <ul>ububtu 18.04
- <ul>ROS melodic
+ ROS melodic
 
 Hardware
 --------
