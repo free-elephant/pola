@@ -27,7 +27,7 @@ $ rosdep install --from-paths src --ignore-src --rosdistro=melodic -y
 ```
 ### Build & Install 
 ```
-catkin_make_isolated --install --use-ninja
+$ catkin_make_isolated --install --use-ninja
 ```
 ***
 ## YDLIDAR G2 - Hector Slam Example
@@ -35,3 +35,20 @@ catkin_make_isolated --install --use-ninja
 
 #### 1. git clone해서 src directory로 복사
 ```
+$ git clone https://github.com/kieunbi/pola.git
+```
+#### 2. ydlidar_ws directory 에 있는 README.md 수행.
+#### 3. catkin_make
+```
+$ catkin_make
+$ devel/setup.bash
+```
+##### 위와 같이 실행되면 성공(package 이름은 carto_mapper)
+#### 4. Start
+```
+roslaunch carto_mapper mapper.launch
+```
+##### 실행 초기 화면
+###### 좌측 하단 Add를 클릭한 후 선택할 수 있는 새로운 창이 열리면 By topic으로 가서 map을 선택하면 실행됨.
+
+##### Map을 추가한 rviz 화면
