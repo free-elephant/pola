@@ -235,6 +235,7 @@ $ python
 >>> cv2.__verion__
 ```
 ![opencv](https://user-images.githubusercontent.com/46383014/74755565-b60c3400-52b6-11ea-9a15-5bc09ef68694.png)
+##### 위와 같이 출력되면 성공.
 
 ### 7. Install Pytorch
 ```
@@ -242,7 +243,6 @@ pip install torch==1.2.0
 pip install torchvision==0.4.0
 ```
 
-##### 위와 같이 출력되면 성공.
 ***
 ## ** Hardware Process **
 #### 1. 도서관 환경 사전 조사
