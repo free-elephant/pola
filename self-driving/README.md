@@ -108,5 +108,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> import sys
 >>> sys.path
 ```
-
+# Result
+![mapping](https://user-images.githubusercontent.com/46383014/73356963-da3fab00-42de-11ea-8a6d-06a07113587a.png)
 ### python 2.7이 path 추가 되었으면 성공함.
