@@ -150,6 +150,8 @@ True or False
 # 만약에 false 가 나오면 gpu 사용이 안되는 상태니 다시 설치하거나 오류 수정해야함.
 ```
 ### 6. Install OpenCV
+
+##### OpenCV 를 최신 버전이 아닌 3.4 버전을 설치하는 이유는 Realsense 관련 패키지를 catkin_make 할 때 OpenCV가 필요한데 3.x 버전을 필요로 한다고 출력되고, 4.0.1 버전을 설치하면 catkin_make .
 #### 6.1 Install dependencies
 ```
 $ sudo add-apt-repository "deb http://security.ubuntu.com ubuntu xenial-security main"
@@ -201,7 +203,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
  -D PYTHON_EXECUTABLE=~/.virtualenvs/cv4/bin/python3.6 ..
 ```
 ![aa](https://user-images.githubusercontent.com/46383014/74754241-aab80900-52b4-11ea-8b63-734668e0caec.png)
-##### 위와 같이 나오면 성공
+##### 위와 같이 출력되면 성공.
 #### 6.5 Compilation
 ```
 # 컴퓨터에 따라 다르지만 약 1시간 정도 소요됨.
@@ -231,9 +233,18 @@ $ workon cv4
 $ python
 >>> import cv2
 >>> cv2.__verion__
+```
+![opencv](https://user-images.githubusercontent.com/46383014/74755565-b60c3400-52b6-11ea-9a15-5bc09ef68694.png)
 
+### 7. Install Pytorch
+```
+pip install torch==1.2.0 
+pip install torchvision==0.4.0
+```
+
+##### 위와 같이 출력되면 성공.
 ***
-## ** 하드웨어 프로세스 **
+## ** Hardware Process **
 #### 1. 도서관 환경 사전 조사
 ##### -구조 및 장애물 파악
 ##### -프로젝트 목표에 부합하는 요건 조사
@@ -251,5 +262,6 @@ $ python
 ##### -외부 MCU 제어(PWM) 가능한 모터드라이버로 교체
 ##### -Rasberry Pi4 2.5A 이상에서 안정적으로 작동 가능함(전류 부족 시 Shut down)
 #### 5. Testing 및 개선
-
+(추가될 예정)
 #### 6. 완료
+(추가될 예정)
