@@ -31,4 +31,7 @@ catkin_make_isolated --install --use-ninja
 ```
 ***
 ## YDLIDAR G2 - Hector Slam Example
-### 설치한 Google Cartographer 를 이용해서 Hector Slam 을 구현해본다. 
+#### 설치한 Google Cartographer 를 이용해서 Hector Slam 을 구현해본다. 
+
+#### 1. git clone해서 src directory로 복사
+```
