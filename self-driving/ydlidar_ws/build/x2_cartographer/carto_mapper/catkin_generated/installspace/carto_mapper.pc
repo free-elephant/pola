@@ -1,0 +1,8 @@
+prefix=/home/pirl/ydlidar_ws/install
+
+Name: carto_mapper
+Description: Description of carto_mapper
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
