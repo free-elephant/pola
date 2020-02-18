@@ -36,12 +36,15 @@ $ catkin_make ydlidar
 ### +++ processing catkin package : 'ydlidar_ros' >> 내가 생성한 ros package
 
 #### ** --주의 해야 할 점-- **
-##### 확실하진 않지만 이 과정을 거치면서 /dev directory 안에 ydlidar file이 생성되어있어야함.
+##### 이 과정을 거치면서 /dev directory 안에 ydlidar file이 생성되어있어야함.
 ```
 $ cd /dev
 $ ls
 
-# 두 코드를 입력했을 때 ydlidar라는 이름의 파일을 찾을 수 있어야함.
+# 두 코드를 입력했을 때 ydlidar라는 이름의 파일을 찾을 수 있어야함. 
+
+# if not ydlidar
+$ reboot
 ```
 
 ### 6. ydlidar 환경 변수를 bashrc file 안에 추가
@@ -59,7 +62,7 @@ $ sudo sh initenv.sh
 
 ### 8. roslaunch 
 ```
-$ rosluanch ydlida_ros lidar_view.launch
+$ rosluanch ydlidar_ros lidar_view.launch
 
 # 실행이 안될 확률이 높음
 ```
@@ -76,7 +79,7 @@ $ catkin_make
 
 ### 10. 다시 실행
 ```
-$ rosluanch ydlida_ros lidar_view.launch
+$ rosluanch ydlidar_ros lidar_view.launch
 ```
 ## Result
 ![mapping](https://user-images.githubusercontent.com/46383014/73356963-da3fab00-42de-11ea-8a6d-06a07113587a.png)
