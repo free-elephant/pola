@@ -1,24 +1,26 @@
 # 1. INTRO
 
-
+***
 software
 --------
- - ububtu 18.04
- - ROS melodic
- - python 3.6
- - python 2.7 on Ros
- - Realsense adk 2.0
- - Tensorflow 1.4
- - opencv 3.4
- - pytorch 1.2
- - catographer
- - cuda
-
+ - UBUNTU 18.04 LTS
+ - ROS Melodic
+ - Python 3.6
+ - Python 2.7 on Ros Platform
+ - Realsense sdk-2.0
+ - Tensorflow-gpu 1.4
+ - Opencv 3.4
+ - Pytorch 1.2
+ - Cartographer
+ - Cuda & Cuda toolkit 10.0
+ - CuDnn 7.6.1
+***
 Hardware
 --------
- - Rasberry Pi4
+ - Rasberry Pi 4
  - Intel Realsense Camera 435i
  - Ydlidar G2
+ - GeForce RTX 2080 * 2
  - BLDC모터 (PG42-BL4261)
  - BLDC모터드라이버 (BDC-15) 
  - 기어모터 고정브라켓 (GMB-42M)
@@ -27,7 +29,65 @@ Hardware
  - 오프로드바퀴 (130파이)
  - 연축전지 12V
  - 보조배터리(output:3A)
+***
+## Install Before Starting 
+#### 메인 서버에 필수적인 파일들을 설치하고자 함. 
+#### 기존에 CUDA 10.0 은 설치되어있었기 때문에 CUDA Toolkit부터 설치함.
+#### anaconda 가상환경을 쓰지 않고, virtualenv 가상환경을 사용.
+***
+### ML Package Focus: CUDA10, cuDNN7.5, Tensorflow-gpu 1.14, Keras, Opencv3.4, PyTorch1.2.
+### 1. Ubuntu Setup
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install build-essential cmake unzip pkg-config
+$ sudo apt-get install libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
+$ sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
+$ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+$ sudo apt-get install libxvidcore-dev libx264-dev
+$ sudo apt-get install libgtk-3-dev
+$ sudo apt-get install libopenblas-dev libatlas-base-dev liblapack-dev gfortran
+$ sudo apt-get install libhdf5-serial-dev graphviz
+$ sudo apt-get install python3-dev python3-tk python-imaging-tk
+$ sudo apt-get install -y linux-image-generic linux-image-extra-virtual
+$ sudo apt-get install -y linux-source linux-headers-generic
+```
+### 2. Nvidia(CUDA Toolkit, cuDnn)
+#### 2.1 Nvidia 저장소 추가
+```
+$ sudo add-apt-repository ppa:graphics-drivers/ppa
+$ sudo apt-get update
+```
+#### 2.2 Install CUDA Toolkit
+##### - CUDA 10.0: https://developer.nvidia.com/cuda-10.0-download-archive (download) 
+```
+$ cd ~
+$ cd Downloads
+$ chmod +x cuda_10.0.130_410.48_linux.run 
+$ sudo ./cuda_10.0.130_410.48_linux.run — override
+```
+##### - [space bar] 를 입력하면 설명 쭉 내려감. 
+##### - "Install NVIDIA Accelerated Graphics Driver" 를 묻는 질문이 나오면 [n]을 입력.(나중에 따로 설치함)
+##### - 나머지는 전부 [y] 입력.
+#### 2.3 Add CUDA to Envirtoment Path
+```
+$ gedit ~/.bashrc 
 
+# bashrc 창이 열리면 밑에 있는 것을 복사해서 붙여넣음. 
+---------------------------
+# NVIDIA CUDA Toolkit
+export PATH=/usr/local/cuda-10.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64
+---------------------------
+# save 하고 난 뒤 끄기
+
+$ source ~/.bashrc
+```
+#### 2.4 Check CUDA toolkit
+```
+$ nvcc -V
+
+***
 ## ** 하드웨어 프로세스 **
 #### 1. 도서관 환경 사전 조사
 ##### -구조 및 장애물 파악
