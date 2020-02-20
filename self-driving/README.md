@@ -27,7 +27,7 @@ $ sudo apt-get update && sudo apt-get upgrade -y
 ### 1.5 ROS Melodic 설치
 ```
 $ sudo apt install ros-melodic-desktop-full
-$ sudo apt-get install ros-kinetic-rqt*
+$ sudo apt-get install ros-melodic-rqt*
 ```
 ### 1.6 rosdep 초기화
 ```
