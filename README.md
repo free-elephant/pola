@@ -35,7 +35,7 @@ Hardware
 #### 기존에 CUDA 10.0 은 설치되어있었기 때문에 CUDA Toolkit부터 설치함.
 #### anaconda 가상환경을 쓰지 않고, virtualenv 가상환경을 사용.
 ***
-### ML Package Focus: CUDA10, cuDNN7.5, Tensorflow-gpu 1.14, Keras, Opencv3.4, PyTorch1.2.
+### CUDA10, cuDNN7.6.1, Tensorflow-gpu 1.14, Keras, Opencv3.4, PyTorch1.2.
 ### 1. Ubuntu Setup
 ```
 $ sudo apt-get update
