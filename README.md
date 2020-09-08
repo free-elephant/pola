@@ -265,3 +265,27 @@ pip install torchvision==0.4.0
 (추가될 예정)
 #### 6. 완료
 (추가될 예정)
+
+
+### 플러스알파
+#tracking with D435I
+
+realcamera 켜보기 https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
+https://github.com/intel/ros2_object_analytics
+
+https://github.com/intel/object_msgs
+
+https://github.com/intel/ros2_object_msgs
+
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+git clone https://github.com/intel/ros2_object_msgs
+cd ~/ros2_ws
+colcon build –symlink-install
+(에러) sudo apt install python3-colcon-common-extensions
+source install/local_setup.bash
+https://index.ros.org/doc/ros2/Tutorials/Colcon-Tutorial/#install-ros-2
+
+openvino https://software.intel.com/en-us/openvino-toolkit/choose-download/free-download-linux
+
+https://registrationcenter.intel.com/en/products/postregistration/?sn=CCBP-C4DWVFFT&EmailID=korea1782%40naver.com&Sequence=2631067&dnld=t
